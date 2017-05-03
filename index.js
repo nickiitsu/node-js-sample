@@ -1,4 +1,4 @@
-/*var express = require('express')
+var express = require('express')
 var app = express()
 
 app.set('port', (process.env.PORT || 5000))
@@ -15,8 +15,8 @@ app.listen(app.get('port'), function() {
 app.get('/webhook', function(req, res) {
     res.sendStatus(200)
 })
-*/
-var express = require('express')
+
+/*var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
@@ -73,3 +73,4 @@ function sendText (sender, text) {
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
 })
+*/
