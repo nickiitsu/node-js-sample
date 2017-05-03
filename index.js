@@ -1,25 +1,24 @@
 var express = require('express')
+var bodyParser = require('body-parser')
+var request = require('request')
 var app = express()
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+  response.send('Hello World!www')
 })
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
 
-app.get('/webhook', function(req, res) {
-    res.sendStatus(200)
+app.listen(app.get('port'), function () {
+  console.log('run at port', app.get('port'))
 })
 
-/*var express = require('express')
-var bodyParser = require('body-parser')
-var request = require('request')
-var app = express()
+/*
 
 app.use(bodyParser.json())
 
@@ -70,7 +69,5 @@ function sendText (sender, text) {
   })
 }
 
-app.listen(app.get('port'), function () {
-  console.log('run at port', app.get('port'))
-})
+
 */
