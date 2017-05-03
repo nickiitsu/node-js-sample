@@ -17,13 +17,15 @@ app.get('/webhook', function(req, res) {
 })
 */
 var express = require('express')
-var bodyParser = require('body-parser')
-var request = require('request')
 var app = express()
 
 
-app.post('/webhook', (function(req, res){
+app.post('/webhook',(req, res)=>{
 
   res.sendStatus(200)
 })
 
+
+app.get('/', function(request, response) {
+  response.send('Hello World!')
+})
