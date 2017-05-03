@@ -22,7 +22,7 @@ var request = require('request')
 var app = express()
 
 
-app.post('/webhook', (req, res) => {
+app.post('/webhook', (function(req, res){
 
   res.sendStatus(200)
 })
